@@ -1,0 +1,13 @@
+C:\Users\abhishek\Desktop\User Registration\UserRegistrationProblem\UserRegistrationProblem\bin\Debug\netcoreapp3.1\UserRegistrationProblem.exe
+C:\Users\abhishek\Desktop\User Registration\UserRegistrationProblem\UserRegistrationProblem\bin\Debug\netcoreapp3.1\UserRegistrationProblem.deps.json
+C:\Users\abhishek\Desktop\User Registration\UserRegistrationProblem\UserRegistrationProblem\bin\Debug\netcoreapp3.1\UserRegistrationProblem.runtimeconfig.json
+C:\Users\abhishek\Desktop\User Registration\UserRegistrationProblem\UserRegistrationProblem\bin\Debug\netcoreapp3.1\UserRegistrationProblem.runtimeconfig.dev.json
+C:\Users\abhishek\Desktop\User Registration\UserRegistrationProblem\UserRegistrationProblem\bin\Debug\netcoreapp3.1\UserRegistrationProblem.dll
+C:\Users\abhishek\Desktop\User Registration\UserRegistrationProblem\UserRegistrationProblem\bin\Debug\netcoreapp3.1\UserRegistrationProblem.pdb
+C:\Users\abhishek\Desktop\User Registration\UserRegistrationProblem\UserRegistrationProblem\obj\Debug\netcoreapp3.1\UserRegistrationProblem.csprojAssemblyReference.cache
+C:\Users\abhishek\Desktop\User Registration\UserRegistrationProblem\UserRegistrationProblem\obj\Debug\netcoreapp3.1\UserRegistrationProblem.AssemblyInfoInputs.cache
+C:\Users\abhishek\Desktop\User Registration\UserRegistrationProblem\UserRegistrationProblem\obj\Debug\netcoreapp3.1\UserRegistrationProblem.AssemblyInfo.cs
+C:\Users\abhishek\Desktop\User Registration\UserRegistrationProblem\UserRegistrationProblem\obj\Debug\netcoreapp3.1\UserRegistrationProblem.csproj.CoreCompileInputs.cache
+C:\Users\abhishek\Desktop\User Registration\UserRegistrationProblem\UserRegistrationProblem\obj\Debug\netcoreapp3.1\UserRegistrationProblem.dll
+C:\Users\abhishek\Desktop\User Registration\UserRegistrationProblem\UserRegistrationProblem\obj\Debug\netcoreapp3.1\UserRegistrationProblem.pdb
+C:\Users\abhishek\Desktop\User Registration\UserRegistrationProblem\UserRegistrationProblem\obj\Debug\netcoreapp3.1\UserRegistrationProblem.genruntimeconfig.cache
