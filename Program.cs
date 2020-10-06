@@ -14,6 +14,9 @@ namespace UserRegistrationProblem
             Console.WriteLine("Enter the lastname");
             string lastName = Console.ReadLine();
             validateUser.ValidateName(firstName,lastName);
+            Console.WriteLine("Enter email id");
+            string emailid = Console.ReadLine();
+            validateUser.ValidateEmail(emailid);
             Console.ReadKey();
         }
     }
@@ -43,6 +46,17 @@ namespace UserRegistrationProblem
             }
             else {
                 Console.WriteLine("Invalid firstname and lastname");
+            }
+        }
+
+        public void ValidateEmail(string email) {
+            Regex reg = new Regex("[a-zA-Z0-9]+([+-_.][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]{2})*$");
+            if (reg.IsMatch(email))
+            {
+                Console.WriteLine("Valid emailid");
+            }
+            else {
+                Console.WriteLine("Invalid emailid");
             }
         }
 
