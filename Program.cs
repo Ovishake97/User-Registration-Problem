@@ -20,6 +20,9 @@ namespace UserRegistrationProblem
             Console.WriteLine("Enter the mobile number");
             string phoneNo = Console.ReadLine();
             validateUser.ValidateMobileNumber(phoneNo);
+            Console.WriteLine("Enter the password");
+            string passWord = Console.ReadLine();
+            validateUser.ValidatePassword(passWord);
             Console.ReadKey();
         }
     }
@@ -75,6 +78,18 @@ namespace UserRegistrationProblem
             }
             else {
                 Console.WriteLine("Invalid mobile number");
+            }
+        }
+
+        //Method to validate password
+        public void ValidatePassword(string passWord) {
+            Regex rx = new Regex("[a-zA-Z0-9]{8,}");
+            if (rx.IsMatch(passWord))
+            {
+                Console.WriteLine("Valid password");
+            }
+            else {
+                Console.WriteLine("Invalid password");
             }
         }
 
