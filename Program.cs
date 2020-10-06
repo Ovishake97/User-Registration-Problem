@@ -17,17 +17,22 @@ namespace UserRegistrationProblem
             Console.WriteLine("Enter email id");
             string emailid = Console.ReadLine();
             validateUser.ValidateEmail(emailid);
+            Console.WriteLine("Enter the mobile number");
+            string phoneNo = Console.ReadLine();
+            validateUser.ValidateMobileNumber(phoneNo);
             Console.ReadKey();
         }
     }
 
+    //Class to define methods to validate different data provided by the users
     public class ValidateUser {
         public string firstName;
         public string lastName;
         public string email;
-        public double phoneNo;
+        public string phoneNo;
         public string passWord;
 
+        //Method to validate the name
         public void ValidateName(string firstName, string lastName) {
             Regex regex = new Regex("^[A-Z]{1}[a-z]{2,}");
             Boolean flag1 = regex.IsMatch(firstName);
@@ -49,14 +54,27 @@ namespace UserRegistrationProblem
             }
         }
 
+        //Method to validate the email id
         public void ValidateEmail(string email) {
-            Regex reg = new Regex("[a-zA-Z0-9]+([+-_.][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]{2})*$");
+            Regex reg = new Regex("^[a-zA-Z0-9]+([+-_.][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]{2})*$");
             if (reg.IsMatch(email))
             {
                 Console.WriteLine("Valid emailid");
             }
             else {
                 Console.WriteLine("Invalid emailid");
+            }
+        }
+
+        //Method to validate the mobile number
+        public void ValidateMobileNumber(string phoneNo) {
+            Regex rgx = new Regex("^[0-9]{2}[ ][0-9]{10}");
+            if (rgx.IsMatch(phoneNo))
+            {
+                Console.WriteLine("Valid mobile number");
+            }
+            else {
+                Console.WriteLine("Invalid mobile number");
             }
         }
 
