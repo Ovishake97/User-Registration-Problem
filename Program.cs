@@ -83,7 +83,7 @@ namespace UserRegistrationProblem
 
         //Method to validate password
         public void ValidatePassword(string passWord) {
-            Regex rx = new Regex("^(?=.*[A-Z])(?=.*[a-z]).{8,}$");
+            Regex rx = new Regex("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$");
             if (rx.IsMatch(passWord))
             {
                 Console.WriteLine("Valid password");
