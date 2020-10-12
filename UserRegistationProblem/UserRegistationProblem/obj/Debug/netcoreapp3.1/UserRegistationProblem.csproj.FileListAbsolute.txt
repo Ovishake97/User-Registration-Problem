@@ -1,0 +1,16 @@
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\bin\Debug\netcoreapp3.1\UserRegistationProblem.exe
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\bin\Debug\netcoreapp3.1\UserRegistationProblem.deps.json
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\bin\Debug\netcoreapp3.1\UserRegistationProblem.runtimeconfig.json
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\bin\Debug\netcoreapp3.1\UserRegistationProblem.runtimeconfig.dev.json
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\bin\Debug\netcoreapp3.1\UserRegistationProblem.dll
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\bin\Debug\netcoreapp3.1\UserRegistationProblem.pdb
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\bin\Debug\netcoreapp3.1\Interop.VSLangProj90.dll
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\obj\Debug\netcoreapp3.1\UserRegistationProblem.csprojAssemblyReference.cache
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\obj\Debug\netcoreapp3.1\Interop.VSLangProj90.dll
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\obj\Debug\netcoreapp3.1\UserRegistationProblem.csproj.ResolveComReference.cache
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\obj\Debug\netcoreapp3.1\UserRegistationProblem.AssemblyInfoInputs.cache
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\obj\Debug\netcoreapp3.1\UserRegistationProblem.AssemblyInfo.cs
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\obj\Debug\netcoreapp3.1\UserRegistationProblem.csproj.CoreCompileInputs.cache
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\obj\Debug\netcoreapp3.1\UserRegistationProblem.dll
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\obj\Debug\netcoreapp3.1\UserRegistationProblem.pdb
+C:\Users\abhishek\Desktop\URP\UserRegistationProblem\UserRegistationProblem\obj\Debug\netcoreapp3.1\UserRegistationProblem.genruntimeconfig.cache
