@@ -1,4 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Runtime.CompilerServices;
 using UserRegistationProblem;
 
 namespace MSTestForUser
@@ -6,38 +8,63 @@ namespace MSTestForUser
     [TestClass]
     public class UnitTest1
     {
-       
-        UserRegistationProblem.ValidateUser validate = new ValidateUser();
+        private string actual;
+        readonly UserRegistationProblem.ValidateUser validate = new ValidateUser();
         [TestMethod]
         public void TestName()
         {
+            
+            string firstName="899", lastName = "jfjf ";
             //Act
-            string actual = validate.ValidateName("Manash", "Das");
+            try
+            {
+                actual = validate.ValidateName(firstName, lastName);
+            }
+
             //Assert
-            Assert.AreEqual("Valid firstname and lastname", actual);
+            catch (UserRegistrationCustomException exception)
+            {
+                Assert.AreEqual("Invalid firstname and lastname", exception.Message);
+            }
         }
         [TestMethod]
         public void TestEmail() {
-
-            //Act
-            string actual = validate.ValidateEmail("abc.xy@bl.co.in");
-            //Asert     
-            Assert.AreEqual("Valid emailid", actual);
+            try
+            {
+                //Act
+                string actual = validate.ValidateEmail("num@00");
+            }
+            catch (UserRegistrationCustomException exception)
+            {
+                //Asert     
+                Assert.AreEqual("Invalid email id", exception.Message);
+            }
         }
         [TestMethod]
         public void TestMobileNumber() {
 
-            //Act
-            string actual = validate.ValidateMobileNumber("91 8890822345");
+            try
+            { //Act
+                string actual = validate.ValidateMobileNumber("99jjjn");
+            }
             //Assert
-            Assert.AreEqual("Valid mobile number", actual);
+            catch (UserRegistrationCustomException exception)
+            {
+                Assert.AreEqual("Invalid mobile number", exception.Message);
+            }
         }
         [TestMethod]
         public void TestPassword() {
             //Act
-            string actual = validate.ValidatePassword("Aikjh89&okd");
+            try
+            {
+                string actual = validate.ValidatePassword("Aikjh89&okd");
+            }
             //Assert
-            Assert.AreEqual("Valid password", actual);
+            catch (NullReferenceException exception)
+            {
+                Assert.AreEqual("Invalid password", exception.Message);
+            }
         }
     }
 }

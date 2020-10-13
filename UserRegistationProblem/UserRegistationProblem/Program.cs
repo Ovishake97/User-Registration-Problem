@@ -34,57 +34,89 @@ namespace UserRegistationProblem
         public double phoneNo;
         public string passWord;
 
-        public string ValidateName(string firstName, string lastName)
+        public string ValidateName (string firstName, string lastName)
         {
             Regex regex = new Regex("^[A-Z]{1}[a-z]{2,}");
-            string printMessage=null;
+            
             Boolean flag1 = regex.IsMatch(firstName);
             Boolean flag2 = regex.IsMatch(lastName);
-            if (flag1 == true && flag2 == true)
+
+            try
             {
-                printMessage="Valid firstname and lastname";
+                if (firstName.Equals(string.Empty) || lastName.Equals(string.Empty))
+                {
+
+                    throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.EMPTY_EXCEPTION, "Names cannot be empty");
+                }
+                if (flag1 == true && flag2 == true)
+                {
+                    return "Valid firstname and lastname";
+                }
+
+                else
+                {
+                    throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_EXCEPTION, "Invalid firstname and lastname");
+                }
             }
-            else if (flag1 == true && flag2 == false)
+            catch (NullReferenceException)
             {
-                printMessage= "Valid firstname but invalid lastname";
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.NULL_EXCEPTION, "Null reference");
             }
-            else if (flag1 == false && flag2 == true)
-            {
-                printMessage = "Invalid firstname but valid lastname";
-            }
-            else
-            {
-                printMessage= "Invalid firstname and lastname";
-            }
-            return printMessage;
+
+
         }
 
         //Method to validate the email id
         public string ValidateEmail(string email)
         {
             Regex reg = new Regex("^[a-zA-Z0-9]+([+-_.][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]{2})*$");
+
+            try
+            {
+                if (email.Equals(string.Empty))
+                {
+                    throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.EMPTY_EXCEPTION, "Email cannot be empty");
+                }
+                if (reg.IsMatch(email))
+                {
+                    return "Valid emailid";
+                }
+
+                else
+                {
+                    throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_EXCEPTION, "Invalid email id");
+                }
+            }
+            catch (NullReferenceException) {
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.NULL_EXCEPTION, "Null reference");
+            }
             
-            if (reg.IsMatch(email))
-            {
-                return "Valid emailid";
-            }
-            else
-            {
-                return "Invalid emailid";
-            }
         }
 
         //Method to validate the mobile number
         public string ValidateMobileNumber(string phoneNo)
         {
             Regex rgx = new Regex("^[0-9]{2}[ ][0-9]{10}");
-            if (rgx.IsMatch(phoneNo))
+
+            try
             {
-                return "Valid mobile number";
+                if (phoneNo.Equals(string.Empty))
+                {
+                    throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.EMPTY_EXCEPTION, "Mobile number cannot be empty");
+                }
+                if (rgx.IsMatch(phoneNo))
+                {
+                    return "Valid mobile number";
+                }
+
+                else
+                {
+                    throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_EXCEPTION, "Invalid mobile number");
+                }
+
             }
-            else
-            {
-                return "Invalid mobile number";
+            catch (NullReferenceException) {
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.NULL_EXCEPTION, "Null reference");
             }
         }
 
@@ -92,14 +124,43 @@ namespace UserRegistationProblem
         public string ValidatePassword(string passWord)
         {
             Regex rx = new Regex("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?!.*[^0-9a-zA-Z].*[^0-9a-zA-Z]).{8,}$");
-            if (rx.IsMatch(passWord))
+
+            try
             {
-                return "Valid password";
+                if (passWord.Equals(string.Empty))
+                {
+                    throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.EMPTY_EXCEPTION, "Password cannot be empty");
+                }
+                if (rx.IsMatch(passWord))
+                {
+                    return "Valid password";
+                }
+
+                else
+                {
+                    throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_EXCEPTION, "Invalid password");
+                }
             }
-            else
+            catch (NullReferenceException)
             {
-                return "Invalid password";
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.NULL_EXCEPTION, "Null reference");
             }
+
+        }
+    }
+
+    public class UserRegistrationCustomException : Exception {
+
+        public enum ExceptionType { 
+        EMPTY_EXCEPTION,
+        INVALID_EXCEPTION,
+        NULL_EXCEPTION
+        }
+        public readonly ExceptionType type;
+
+        public UserRegistrationCustomException(ExceptionType type, string message) : base(message)
+        {
+            this.type = type;
         }
 
     }
