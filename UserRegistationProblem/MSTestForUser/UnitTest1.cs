@@ -13,8 +13,8 @@ namespace MSTestForUser
         [TestMethod]
         public void TestName()
         {
-            
-            string firstName="899", lastName = "jfjf ";
+
+            string firstName = "899", lastName = "jfjf ";
             //Act
             try
             {
@@ -65,6 +65,17 @@ namespace MSTestForUser
             {
                 Assert.AreEqual("Invalid password", exception.Message);
             }
+        }
+        [TestMethod]
+        public void TestMultipleEmails() { 
+            //Arrange
+            string[] sample= {"abc@yahoo.com","abc-100@yahoo.com","abc.100@yahoo.com","abc11@abc.com","abc-100@abc.net","abc.100@abc.com.au",
+            "abc@1.com","abc@gmail.com.com","abc@.com",".abc@abc.com","abc123@com","abc@.com.com","abc()@gmail.com","abc@%*.com",
+            "abc..2002@gmail.com","abc.@gmail.com","abc@gmail.com.1a"};
+            //Act
+            string actual = validate.EmailSamples(sample);
+            //Assert
+            Assert.AreEqual("Hence, valid email ids are 7 and invalid email ids are 10", actual);
         }
     }
 }
