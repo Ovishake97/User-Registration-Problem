@@ -22,6 +22,10 @@ namespace UserRegistationProblem
             Console.WriteLine("Enter password");
             string passWord = Console.ReadLine();
            Console.WriteLine(validateUser.ValidatePassword(passWord));
+            string[] sample = {"abc@yahoo.com","abc-100@yahoo.com","abc.100@yahoo.com","abc11@abc.com","abc-100@abc.net","abc.100@abc.com.au",
+            "abc@1.com","abc@gmail.com.com","abc@.com",".abc@abc.com","abc123@com","abc@.com.com","abc()@gmail.com","abc@%*.com",
+            "abc..2002@gmail.com","abc.@gmail.com","abc@gmail.com.1a"};
+         Console.WriteLine(validateUser.EmailSamples(sample));
             Console.ReadKey();
         }
     }
@@ -147,7 +151,29 @@ namespace UserRegistationProblem
             }
 
         }
+
+        public string EmailSamples(string[] samples)
+        {
+            Regex regx = new Regex("^[a-zA-Z0-9]+([+-_.][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]{2})*$");
+            int valid = 0, invalid = 0;
+            foreach (string data in samples)
+            {
+                if (regx.IsMatch(data))
+                {
+                    Console.WriteLine($"Valid- " + data);
+                    valid++;
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid- " + data);
+                    invalid++;
+                }
+            }
+            return "Hence, valid email ids are " + valid + " and invalid email ids are " + invalid;
+        }
     }
+
+    
 
     public class UserRegistrationCustomException : Exception {
 
